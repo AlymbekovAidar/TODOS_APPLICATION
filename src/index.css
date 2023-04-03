@@ -1,3 +1,9 @@
+@import 'react-toastify/dist/ReactToastify.css';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,215 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.page_content {
+  display: flex;
+  justify-content: center;
+
+  padding: 20px;
+  flex-grow: 1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+input:focus {
+  background: none;
+  border: 1px solid black;
+  border-radius: 8px;
+  outline: none;
+
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.Toastify__toast-body > div:last-child {
+  color: black !important;
+}
+
+.todo_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  padding: 1.5rem;
+
+  border-radius: 0.5rem;
+}
+
+.nav_list {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 5rem;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.header > * {
+  width: 33%;
+}
+
+.header h1 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header h1 > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 > span:last-child {
+  cursor: pointer;
+}
+
+.header > div:last-child > span {
+  float: right;
+}
+
+.header > div:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header > div:last-child > div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  cursor: pointer;
+}
+
+.todo_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+}
+
+.todo_list_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.todo_list_wrapper > h1 {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.todo_list_title {
+  display: inline;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todo_item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  width: 18%;
+
+  padding: 1.5rem;
+
+  border-radius: 0.5rem;
+}
+
+.is_important_todo_item {
+  background: #ff0000;
+}
+
+.todo_item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo_item__header > span {
+  max-width: 80%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.todo_item__header > span:hover {
+  transform: scale(1.2);
+}
+
+.todo_item__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.auth_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 20vh;
+  padding: 30px;
+
+  border-radius: 0.5rem;
+
+  background: #312b2b;
+}
+
+
+
+.app.light * {
+  color: #000
+}
+
+.app.dark * {
+  color: #fff
+}
+
+.bg_dark {
+  background: #312b2b;
+}
+
+.bg_light {
+  background: #948d8d;
 }

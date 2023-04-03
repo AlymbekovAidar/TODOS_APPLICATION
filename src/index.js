@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+
+import { BrowserRouter } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import TodosStoreProvider from "./context/todosStore/TodosStoreProvider";
+import ThemeProvider from "./context/theme/ThemeProvider";
+import AppProvider from "./context/app/AppProvider";
+
+import './index.css';
+import AuthProvider from "./context/auth/AuthProvider";
+import UserImportantListProvider from "./context/userImportantList/UserImportantListProvider";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <BrowserRouter>
+      <AppProvider>
+        <AuthProvider>
+          <UserImportantListProvider>
+            <TodosStoreProvider>
+              <ThemeProvider>
+                <App />
+              </ThemeProvider>
+            </TodosStoreProvider>
+          </UserImportantListProvider>
+        </AuthProvider>
+      </AppProvider>
+      <ToastContainer />
+    </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
